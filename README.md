@@ -11,7 +11,9 @@
 </p>
 
 ## Usage
-> Folders are not supported in a lite mnaddon projects.
+> ⚠️ Folders are not supported in a lite mnaddon projects.
+
+> ⚠️ Support Mac only and Marginnote for Mac must be installed.
 #### Install First
 ```shll
 npm i mnaddon-lite -g
