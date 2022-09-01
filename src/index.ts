@@ -9,6 +9,7 @@ import pkg from "../package.json"
 
 import { Command } from "commander"
 import { isAddonProject } from "./utils"
+import unpack from "./unpack"
 
 const program = new Command()
 program
@@ -32,9 +33,10 @@ program
   })
 program
   .command("resize <png-path>")
+  .option("-o, --output <output-name>")
   .description("resize logo to 44x44, which is required by MarginNote")
-  .action(pngPath => {
-    resize(pngPath)
+  .action((pngPath, { output }) => {
+    resize(pngPath, output)
   })
 program
   .command("watch")
@@ -67,11 +69,19 @@ program
   })
 program
   .command("build [output-name]")
-  .description("build a mnaddon file. output-name is optional")
+  .description("build a mnaddon file")
   .action(outputName => {
     isAddonProject(() => {
       build(outputName)
     })
+  })
+
+program
+  .command("unpack <mnaddon-path>")
+  .option("-o, --output <output-name>")
+  .description("unpack a mnaddon file")
+  .action((mnaddonPath, { output }) => {
+    unpack(mnaddonPath, output)
   })
 
 program.parse(process.argv)
