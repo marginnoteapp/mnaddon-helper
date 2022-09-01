@@ -5,13 +5,10 @@ import zip from "./zip"
 import create from "./create"
 import dev from "./dev"
 import restart from "./restart"
+import pkg from "../package.json"
 
 import { Command } from "commander"
 import { isAddonProject } from "./utils"
-function getVersion() {
-  const pkg = require("../package.json")
-  return pkg.version
-}
 
 const program = new Command()
 program
@@ -25,7 +22,7 @@ program
   $ mnaddon-lite dev
   $ mnaddon-lite zip`
   )
-  .version(getVersion(), "-v, --version", "output the current version")
+  .version(pkg.version, "-v, --version", "output the current version")
 
 program
   .command("create <project-name>")
