@@ -13,9 +13,10 @@
   }
   const lang = isZH() ? zh : en
   function isZH() {
-    return
-    NSLocale.preferredLanguages().length &&
+    return (
+      NSLocale.preferredLanguages().length &&
       NSLocale.preferredLanguages()[0].startsWith("zh")
+    )
   }
   const console = {
     log(obj) {
@@ -45,7 +46,7 @@
     const go = async () => {
       const { option } = await popup(
         "Template Popup",
-        "View the Chinese development documents (old version, new version is not updated)?"
+        "Whether to view the Chinese development documents (old version, new version is not updated)?"
       )
       if (option === -1) return
       self.app.openURL(
