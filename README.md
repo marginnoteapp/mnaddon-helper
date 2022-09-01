@@ -13,7 +13,7 @@
 ## Usage
 > ⚠️ Folders are not supported in a lite mnaddon projects.
 
-> ⚠️ Support Mac only and Marginnote for Mac must be installed.
+> ⚠️ Only support Mac and Marginnote for Mac must be installed.
 #### Install First
 ```shll
 npm i mnaddon-lite -g
@@ -23,6 +23,8 @@ yarn add mnaddon-lite -g
 pnpm add mnaddon-lite -g
 ```
 #### Then
+
+You can use `mnaddon-lite help` or `mnaddon-lite help restart` to get more information.
 
 ```shll
 Usage: mnaddon-lite command [options]
