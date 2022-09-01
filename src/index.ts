@@ -21,7 +21,8 @@ program
   $ mnaddon-lite watch
   $ mnaddon-lite restart
   $ mnaddon-lite dev
-  $ mnaddon-lite build`
+  $ mnaddon-lite build
+  $ mnaddon-lite unpack ./template.mnaddon -o ./output`
   )
   .version(pkg.version, "-v, --version", "output the current version")
 
