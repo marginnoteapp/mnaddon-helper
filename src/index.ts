@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 import resize from "./resize"
 import watch from "./watch"
-import zip from "./zip"
+import build from "./build"
 import create from "./create"
 import dev from "./dev"
 import restart from "./restart"
@@ -20,7 +20,7 @@ program
   $ mnaddon-lite watch
   $ mnaddon-lite restart
   $ mnaddon-lite dev
-  $ mnaddon-lite zip`
+  $ mnaddon-lite build`
   )
   .version(pkg.version, "-v, --version", "output the current version")
 
@@ -32,7 +32,7 @@ program
   })
 program
   .command("resize <png-path>")
-  .description("resize logo to 44x44, which is required")
+  .description("resize logo to 44x44, which is required by MarginNote")
   .action(pngPath => {
     resize(pngPath)
   })
@@ -66,11 +66,11 @@ program
     })
   })
 program
-  .command("zip [output-name]")
-  .description("create a mnaddon file. output-name is optional")
+  .command("build [output-name]")
+  .description("build a mnaddon file. output-name is optional")
   .action(outputName => {
     isAddonProject(() => {
-      zip(outputName)
+      build(outputName)
     })
   })
 

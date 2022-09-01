@@ -2,7 +2,7 @@
   "name": "mnaddon-lite",
   "description": "A helper for lite mnaddon development",
   "license": "MIT",
-  "version": "0.9.9",
+  "version": "1.0.0",
   "repository": "https://github.com/marginnoteapp/mnaddon-lite-helper",
   "author": "MarginNote<https://github.com/marginnoteapp>",
   "files": [
