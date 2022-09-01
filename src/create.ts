@@ -1,10 +1,10 @@
-import { copySync } from "fs-extra"
+import fs from "fs-extra"
 import path from "path"
 import { thisDir } from "./utils"
 
 export default function (projectName: string) {
   try {
-    copySync(
+    fs.copySync(
       path.resolve(__dirname, "../template/"),
       thisDir(`./${projectName}`)
     )

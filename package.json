@@ -2,15 +2,15 @@
   "name": "mnaddon-lite",
   "description": "A helper for lite mnaddon development",
   "license": "MIT",
-  "version": "0.9.7",
+  "version": "0.9.6",
   "repository": "https://github.com/marginnoteapp/mnaddon-lite-helper",
   "author": "MarginNote<https://github.com/marginnoteapp>",
   "files": [
-    "dist/**/*.js",
+    "dist/**/*.mjs",
     "template/**/*"
   ],
   "bin": {
-    "mnaddon-lite": "dist/index.js"
+    "mnaddon-lite": "dist/index.mjs"
   },
   "dependencies": {
     "chokidar": "^3.5.3",
