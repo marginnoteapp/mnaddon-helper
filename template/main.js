@@ -18,6 +18,7 @@
       NSLocale.preferredLanguages()[0].startsWith("zh")
     )
   }
+  // You can filter by "template" in the Console.app
   const console = {
     log(obj) {
       JSB.log(`${Addon.key} %@`, obj)

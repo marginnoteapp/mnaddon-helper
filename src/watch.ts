@@ -1,4 +1,3 @@
-import { exec } from "child_process"
 import chokidar from "chokidar"
 import fs, { emptyDirSync, ensureDirSync } from "fs-extra"
 import os from "os"
@@ -12,6 +11,8 @@ export default function () {
   }`
   ensureDirSync(folder)
   emptyDirSync(folder)
+  console.log("copyed to " + folder)
+  console.log("watching...")
   chokidar.watch(thisDir("*.{js,json,png}")).on("all", (e, p) => {
     console.log(e, path.basename(p))
     fs.copyFileSync(p, `${folder}/${path.basename(p)}`)

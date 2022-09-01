@@ -12,7 +12,7 @@ export default function (projectName: string) {
       thisDir(`./${projectName}`)
     )
     console.log(
-      `create project "${projectName}" success, you can run "cd ${projectName}" to enter the project`
+      `create project successfully, you can run "cd ${projectName}" to enter this project`
     )
   } catch (error) {
     console.log(error)
