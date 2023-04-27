@@ -1,9 +1,9 @@
 {
-  "name": "mnaddon-lite",
-  "description": "A helper for lite mnaddon development",
+  "name": "mnaddon",
+  "description": "A helper for mnaddon development",
   "license": "MIT",
-  "version": "1.0.1",
-  "repository": "https://github.com/marginnoteapp/mnaddon-lite-helper",
+  "version": "1.0.2",
+  "repository": "https://github.com/marginnoteapp/mnaddon-helper",
   "author": "MarginNote<https://github.com/marginnoteapp>",
   "files": [
     "dist/**/*.mjs",
@@ -15,6 +15,7 @@
   "dependencies": {
     "chokidar": "^3.5.3",
     "commander": "^9.4.0",
+    "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "jimp": "^0.16.1",
     "run-applescript": "^6.0.0"

@@ -1,6 +1,7 @@
 import jimp from "jimp"
 import path from "path"
 import fs from "fs-extra"
+import fg from "fast-glob"
 export default async function (png: string, outputName: string | undefined) {
   try {
     const pngPath = path.resolve(process.cwd(), png)
@@ -14,3 +15,16 @@ export default async function (png: string, outputName: string | undefined) {
     console.log(e)
   }
 }
+
+// async function main() {
+//   const p = "/Users/ourongxing/marginnote/mnaddon/ohmymn/assets/icon"
+//   fg.sync([`${p}/*`], {
+//     deep: 1,
+//     suppressErrors: true
+//   }).forEach(async k => {
+//     const image = await jimp.read(k)
+//     image.resize(44, 44)
+//     await image.writeAsync(k)
+//   })
+// }
+// main()

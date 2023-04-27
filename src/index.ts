@@ -10,6 +10,7 @@ import pkg from "../package.json"
 import { Command } from "commander"
 import { isAddonProject } from "./utils"
 import unpack from "./unpack"
+import certify from "./certify"
 
 const program = new Command()
 program
@@ -83,6 +84,13 @@ program
   .description("unpack a mnaddon file")
   .action((mnaddonPath, { output }) => {
     unpack(mnaddonPath, output)
+  })
+
+program
+  .command("certify <mnaddon-path> <cert-key>")
+  .description("certify a mnaddon file with cert key")
+  .action((mnaddonPath, certKey) => {
+    certify(mnaddonPath, certKey)
   })
 
 program.parse(process.argv)
