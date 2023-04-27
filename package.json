@@ -2,16 +2,14 @@
   "name": "mnaddon",
   "description": "A helper for mnaddon development",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "https://github.com/marginnoteapp/mnaddon-helper",
   "author": "MarginNote<https://github.com/marginnoteapp>",
   "files": [
     "dist/**/*.mjs",
     "template/**/*"
   ],
-  "bin": {
-    "mnaddon-lite": "dist/index.mjs"
-  },
+  "bin": "dist/index.mjs",
   "dependencies": {
     "chokidar": "^3.5.3",
     "commander": "^9.4.0",
